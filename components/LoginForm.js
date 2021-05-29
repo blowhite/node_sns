@@ -56,6 +56,5 @@ const LoginForm = ({setIsLoggedIn}) => {
         </Form>
     );
 };
-
 // export default React.memo(LoginForm);
 export default LoginForm;
