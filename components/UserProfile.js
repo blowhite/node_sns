@@ -3,10 +3,15 @@ import { Card, Form, Button } from 'antd';
 import Avatar from 'antd/lib/avatar/avatar';
 import PropTypes from 'prop-types';
 import LoginForm from './LoginForm';
+import { useDispatch } from 'react-redux';
+import { logoutAction } from '../reducers/user';
 
-const UserProfile = ({ setIsLoggedIn }) => {
+const UserProfile = () => {
+    const dispatch = useDispatch();
+
     const onLogOut = useCallback(() => {
-        setIsLoggedIn(false);
+        // setIsLoggedIn(false);
+        dispatch(logoutAction());
     }, []);
     return (
         <Card
@@ -27,7 +32,7 @@ const UserProfile = ({ setIsLoggedIn }) => {
     );
 };
 
-LoginForm.propTypes = {
-    setIsLoggedIn: PropTypes.func.isRequired,
-}
+// LoginForm.propTypes = {
+//     setIsLoggedIn: PropTypes.func.isRequired,
+// }
 export default UserProfile;
