@@ -45,7 +45,7 @@ const dummyPost = {
     content: '더미',
     user: {
         id: 1,
-        nickname: '제로초',
+        nickname: '더미데이터',
     },
     images: [],
     comments: [],

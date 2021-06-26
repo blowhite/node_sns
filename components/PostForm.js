@@ -11,7 +11,7 @@ const PostForm = () => {
     }, []);
     const imageInput = useRef();    
     const dispatch = useDispatch();
-    const onClickImageUploda = useCallback(() => {
+    const onClickImageUpload = useCallback(() => {
         imageInput.current.click();
     }, [imageInput.current]);
     const onSubmit = useCallback(() => {
@@ -26,7 +26,7 @@ const PostForm = () => {
             maxLength={140} placeholder="What New bro?" />
           <div>
             <input type="file" multiple hidden ref={imageInput}/>
-            <Button>이미지 업로드</Button>
+            <Button onClick={onClickImageUpload}>이미지 업로드</Button>
             <Button type="primary" style= {{ float: 'right' }} htmlType="submit">짹짹</Button>
           </div>
           <div>
